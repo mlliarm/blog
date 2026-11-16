@@ -10,6 +10,11 @@ baseurl: "/blog"
 permalink: /:year/:month/:day/:title/
 markdown: kramdown
 excerpt_separator: "<!--more-->"
+
+# Code is highlighted in the browser by Prism (it supports APL, J, PARI/GP).
+kramdown:
+  syntax_highlighter_opts:
+    disable: true
 timezone: UTC
 
 plugins:

@@ -38,7 +38,7 @@ Pretty, cool, right?
 ## Code
 In modern Dyalog APL, v.18.0:
 
-```dyalog
+```apl
 ⎕IO←1 ⍝ If it's set to 0 instead, there's no 'A' character in the center and thus the code behaves incorrectly!
 ∇Z←EX2
   V←13+I←0×⍴A←25⍴'0'
@@ -139,7 +139,7 @@ I've found in the [docs](http://help.dyalog.com/12.0/index.html?page=html%2Freln
 
 So the following code should work on tryapl.org:
 
-```dyalog
+```apl
 ⎕IO←1 ⍝ Without this there's no 'A' character in the center!
 Tab←⎕UCS 9 ⍝ Defining the tab character ('\t' in C).
 

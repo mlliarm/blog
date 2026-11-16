@@ -38,7 +38,7 @@ When you relogin it should work.
 
 `~/.config/lxsession/LXDE-pi/desktop.conf`
 
-```
+```ini
 [GTK]
 sNet/ThemeName=PiXflat
 iNet/DoubleClickTime=250

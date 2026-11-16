@@ -14,7 +14,7 @@ It should have an APM server.
 
 Capture the following information from the Elastic APM page from Kibana:
 
-```
+```bash
 SERVICE_NAME=<YOUR_SERVICE_NAME>
 SERVER_URL=<APM_SERVER_ENDPOINT>
 SECRET_TOKEN=<APM_TOKEN>
@@ -24,7 +24,7 @@ SECRET_TOKEN=<APM_TOKEN>
 
 In your virtualenv run:
 
-```
+```bash
 pip install elastic-apm
 ```
 
@@ -42,7 +42,7 @@ app.add_middleware(ElasticAPM) # APM
 
 In a CLI write:
 
-```
+```bash
  export ELASTIC_APM_SERVICE_NAME=<YOUR_SERVICE_NAME>
  export ELASTIC_APM_SERVER_URL=<APM_SERVER_ENDPOINT>
  export ELASTIC_APM_SECRET_TOKEN=<APM_TOKEN>

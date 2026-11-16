@@ -6,6 +6,13 @@
   --accent: #2563eb;
   --border: #e5e7eb;
   --code-bg: #f3f4f6;
+  --tok-comment: #6a737d;
+  --tok-keyword: #cf222e;
+  --tok-string: #0a3069;
+  --tok-number: #0550ae;
+  --tok-function: #8250df;
+  --tok-builtin: #953800;
+  --tok-punct: #57606a;
   color-scheme: light;
 }
 
@@ -17,6 +24,13 @@
   --accent: #7aa2f7;
   --border: #2a2a2a;
   --code-bg: #1e1e1e;
+  --tok-comment: #8b949e;
+  --tok-keyword: #ff7b72;
+  --tok-string: #a5d6ff;
+  --tok-number: #79c0ff;
+  --tok-function: #d2a8ff;
+  --tok-builtin: #ffa657;
+  --tok-punct: #9da5ae;
   color-scheme: dark;
 }
 
@@ -131,6 +145,19 @@ code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospac
 code { background: var(--code-bg); padding: 2px 5px; border-radius: 4px; }
 pre { background: var(--code-bg); padding: 14px 16px; border-radius: 6px; overflow-x: auto; line-height: 1.5; }
 pre code { background: none; padding: 0; }
+
+/* Syntax highlighting (Prism tokens) */
+.token.comment, .token.prolog, .token.doctype, .token.cdata { color: var(--tok-comment); font-style: italic; }
+.token.keyword, .token.statement, .token.selector, .token.important, .token.atrule,
+.token.adverb, .token.conjunction, .token.monadic-operator, .token.dyadic-operator { color: var(--tok-keyword); }
+.token.string, .token.char, .token.attr-value, .token.regex, .token.url { color: var(--tok-string); }
+.token.number, .token.boolean, .token.constant, .token.symbol { color: var(--tok-number); }
+.token.function, .token.verb, .token.class-name, .token.dfn { color: var(--tok-function); }
+.token.builtin, .token.system-function, .token.variable, .token.property,
+.token.attr-name, .token.tag, .token.section { color: var(--tok-builtin); }
+.token.operator, .token.assignment, .token.entity { color: var(--tok-keyword); }
+.token.punctuation { color: var(--tok-punct); }
+.token.bold, .token.important { font-weight: 600; }
 table { border-collapse: collapse; display: block; overflow-x: auto; }
 th, td { border: 1px solid var(--border); padding: 6px 10px; }
 hr { border: 0; border-top: 1px solid var(--border); margin: 2em 0; }

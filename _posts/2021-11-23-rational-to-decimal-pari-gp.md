@@ -4,7 +4,7 @@ date: 2021-11-23 09:08:38 +0000
 gist: https://gist.github.com/mlliarm/2f8b83f436245dfe109ccef93ddae2c8
 ---
 
-```gp
+```parigp
 \\ So we have a rational number with nominator called 'p' and denom called 'q'.
 \\ The person that gave us these numbers claims that the rational approximates Pi.
 \\ We want to test this hypothesis.
