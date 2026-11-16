@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<input id="search" class="search" type="search" placeholder="Search posts…" aria-label="Search posts" autocomplete="off"
+       data-index="{{ '/search.json' | relative_url }}">
+
+<ul id="post-list" class="post-list">
+  {% for post in site.posts %}
+  <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
+
+<ul id="search-results" class="post-list" hidden></ul>
+<p id="no-results" class="muted" hidden>No posts match.</p>

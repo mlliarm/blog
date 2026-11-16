@@ -1,0 +1,21 @@
+<aside class="archive" aria-label="Archive">
+  <h2>Archive</h2>
+  {% assign by_year = site.posts | group_by_exp: "p", "p.date | date: '%Y'" %}
+  {% for year in by_year %}
+  {% assign year_has_current = year.items | where: "url", page.url | size %}
+  <details{% if forloop.first or year_has_current > 0 %} open{% endif %}>
+    <summary>{{ year.name }} <span class="count">{{ year.size }}</span></summary>
+    {% assign by_month = year.items | group_by_exp: "p", "p.date | date: '%B'" %}
+    {% for month in by_month %}
+    <div class="month">{{ month.name }}</div>
+    <ul>
+      {% for p in month.items %}
+      <li><a href="{{ p.url | relative_url }}"{% if p.url == page.url %} aria-current="page"{% endif %}>{{ p.title }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </details>
+  {% else %}
+  <p class="muted">No posts yet.</p>
+  {% endfor %}
+</aside>

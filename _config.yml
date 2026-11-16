@@ -1,0 +1,28 @@
+title: Blog
+description: Notes and writing.
+author: Milia
+
+# Served at mlliarm.github.io/blog, which GitHub redirects to milia.dev/blog
+# (via the custom domain set on the mlliarm.github.io user site).
+url: "https://milia.dev"
+baseurl: "/blog"
+
+permalink: /:year/:month/:day/:title/
+markdown: kramdown
+timezone: UTC
+
+plugins:
+  - jekyll-feed
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
