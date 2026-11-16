@@ -52,6 +52,10 @@
     results.textContent = "";
     matches.forEach(function (p) {
       var li = document.createElement("li");
+      var time = document.createElement("time");
+      time.dateTime = p.date;
+      time.textContent = p.date;
+      li.appendChild(time);
       var a = document.createElement("a");
       a.href = p.url;
       a.textContent = p.title;
