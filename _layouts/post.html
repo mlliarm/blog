@@ -9,5 +9,10 @@ layout: default
   <div class="post-body">
     {{ content }}
   </div>
+  {% if page.gist %}
+  <p class="post-source">
+    Originally published as a <a href="{{ page.gist }}">gist</a>{% for r in page.related %} · <a href="{{ r.url }}">{{ r.title }}</a>{% endfor %}.
+  </p>
+  {% endif %}
 </article>
 <p class="back"><a href="{{ '/' | relative_url }}">← All posts</a></p>

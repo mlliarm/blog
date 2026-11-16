@@ -9,6 +9,7 @@ baseurl: "/blog"
 
 permalink: /:year/:month/:day/:title/
 markdown: kramdown
+excerpt_separator: "<!--more-->"
 timezone: UTC
 
 plugins:
