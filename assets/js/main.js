@@ -56,6 +56,11 @@
       time.dateTime = p.date;
       time.textContent = p.date;
       li.appendChild(time);
+      var sep = document.createElement("span");
+      sep.className = "sep";
+      sep.setAttribute("aria-hidden", "true");
+      sep.textContent = ">>>";
+      li.appendChild(sep);
       var a = document.createElement("a");
       a.href = p.url;
       a.textContent = p.title;
